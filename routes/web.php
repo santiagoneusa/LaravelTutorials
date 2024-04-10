@@ -24,3 +24,7 @@ Route::post('/products/save', 'App\Http\Controllers\ProductController@save')->na
 Route::get('/products/{id}', 'App\Http\Controllers\ProductController@show')->name('product.show');
 
 Auth::routes();
+
+
+Route::get('api/products', 'App\Http\Controllers\Api\ProductApiController@index')->name('api.product.index');
+Route::get('api/products/{id}', 'App\Http\Controllers\Api\ProductApiController@show')->name('api.product.show');
